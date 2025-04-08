@@ -266,6 +266,7 @@
                             <p style="font-size: 0.85rem; color: #666; margin-top: 0.3rem;">Subgoal Model predicts next single-step subtask</p>
                             <p style="font-size: 0.85rem; color: #666; margin-top: 0.3rem;">Synthesizer Model generates program given the predicted subtask</p>
                             <p style="font-size: 0.85rem; color: #666; margin-top: 0.3rem;">Program is executed & task specifications are updated</p>
+                            <p style="font-size: 0.85rem; color: #666; margin-top: 0.3rem;">Subtasks become only apparent in hindsight.</p>
                     </div>
                 </div>
                 <div class="features" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
@@ -295,92 +296,19 @@
         </section>
 
         <section class="section">
-            <h2>Evaluation Setup</h2>
+            <h2>Evaluation</h2>
             <div style="margin-bottom: 2rem;">
                 <h3>Methodology</h3>
                 <div style="background: white; padding: 1.5rem; border-radius: 8px; margin-top: 1rem; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-                    <h4 style="color: var(--primary-color); margin-bottom: 1rem;">Model Architecture</h4>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 1rem 0;">
-                        <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px;">
-                            <h5 style="color: var(--primary-color); margin-bottom: 0.8rem;">🧠 Primary Models</h5>
-                            <div style="margin-bottom: 1rem;">
-                                <p style="font-weight: 600; margin-bottom: 0.3rem;">EfficientNet (B4)</p>
-                                <p style="font-size: 0.9rem; color: #666;">Core architecture for evaluations</p>
-                            </div>
-                            <div>
-                                <p style="font-weight: 600; margin-bottom: 0.3rem;">ResNet-101</p>
-                                <p style="font-size: 0.9rem; color: #666;">Feature extraction backbone</p>
-                            </div>
-                        </div>
-                        <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px;">
-                            <h5 style="color: var(--primary-color); margin-bottom: 0.8rem;">👁️ Advanced Models</h5>
-                            <div style="margin-bottom: 1rem;">
-                                <p style="font-weight: 600; margin-bottom: 0.3rem;">VisionTransformer-384</p>
-                                <p style="font-size: 0.9rem; color: #666;">Self-attention mechanisms</p>
-                            </div>
-                            <div>
-                                <p style="font-weight: 600; margin-bottom: 0.3rem;">ConvNeXt</p>
-                                <p style="font-size: 0.9rem; color: #666;">Modern CNN architecture</p>
-                            </div>
-                        </div>
-                    </div>
+                    <h4 style="color: var(--primary-color); margin-bottom: 1rem;">ExeDec Framework</h4>
+                    <img src="images/exedec_framework.svg" alt="ExeDec Framework" class="main-image">
                 </div>
-
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1.5rem;">
-                    <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-                        <h4 style="color: var(--primary-color); margin-bottom: 1rem;">Foundation Models</h4>
-                        <ul style="list-style: none; padding-left: 0;">
-                            <li style="margin-bottom: 1rem; padding: 0.8rem; background: #f8f9fa; border-radius: 6px;">
-                                <p style="font-weight: 600;">🔍 Segment Anything (SAM)</p>
-                                <p style="font-size: 0.9rem; color: #666; margin-top: 0.3rem;">State-of-the-art segmentation model for precise object boundary detection</p>
-                            </li>
-                            <li style="margin-bottom: 1rem; padding: 0.8rem; background: #f8f9fa; border-radius: 6px;">
-                                <p style="font-weight: 600;">🎯 DETR</p>
-                                <p style="font-size: 0.9rem; color: #666; margin-top: 0.3rem;">End-to-End object detection with transformers</p>
-                            </li>
-                            <li style="padding: 0.8rem; background: #f8f9fa; border-radius: 6px;">
-                                <p style="font-weight: 600;">🎯 CLIP</p>
-                                <p style="font-size: 0.9rem; color: #666; margin-top: 0.3rem;">Zero-shot visual-language understanding and classification</p>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-                        <h4 style="color: var(--primary-color); margin-bottom: 1rem;">Segmentation Methods</h4>
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-                            <div style="background: #e3f2fd; padding: 1rem; border-radius: 6px;">
-                                <p style="font-weight: 600; margin-bottom: 0.5rem;">DSEG (Ours)</p>
-                                <p style="font-size: 0.85rem; color: #666;">Data-driven hierarchical segmentation with SAM</p>
-                            </div>
-                            <div style="background: #f8f9fa; padding: 1rem; border-radius: 6px;">
-                                <p style="font-weight: 600; margin-bottom: 0.5rem;">SLIC</p>
-                                <p style="font-size: 0.85rem; color: #666;">Superpixel segmentation</p>
-                            </div>
-                            <div style="background: #f8f9fa; padding: 1rem; border-radius: 6px;">
-                                <p style="font-weight: 600; margin-bottom: 0.5rem;">Quickshift</p>
-                                <p style="font-size: 0.85rem; color: #666;">Mode-seeking segmentation</p>
-                            </div>
-                            <div style="background: #f8f9fa; padding: 1rem; border-radius: 6px;">
-                                <p style="font-weight: 600; margin-bottom: 0.5rem;">Felzenszwalb</p>
-                                <p style="font-size: 0.85rem; color: #666;">Graph-based segmentation</p>
-                            </div>
-                            <div style="background: #f8f9fa; padding: 1rem; border-radius: 6px;">
-                                <p style="font-weight: 600; margin-bottom: 0.5rem;">Watershed</p>
-                                <p style="font-size: 0.85rem; color: #666;">Marker-based segmentation</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
                 <div style="background: white; padding: 1.5rem; border-radius: 8px; margin-top: 1.5rem; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
                     <h4 style="color: var(--primary-color); margin-bottom: 1rem;">Evaluation Framework</h4>
-                    <p>Comprehensive evaluation across multiple dimensions:</p>
+                    <p>Comprehensive evaluation across two program synthesis domains:</p>
                     <ul style="list-style-type: none; padding-left: 1rem; margin: 1rem 0;">
-                        <li>• Correctness (Random Model, Random Explanation, Single Deletion)</li>
-                        <li>• Output Completeness (Preservation and Deletion)</li>
-                        <li>• Consistency (Noise Preservation and Deletion)</li>
-                        <li>• Contrastivity (Preservation and Deletion)</li>
-                        <li>• Performance Metrics (Gini Index, Stability, Computation Time)</li>
+                        <li>• Robustfill (String manipulation)</li>
+                        <li>• Deepcoder (List manipulation)</li>
                     </ul>
                 </div>
             </div>
