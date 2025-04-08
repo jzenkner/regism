@@ -243,7 +243,7 @@
         </section>
 
         <section class="section">
-            <h2>Key Features</h2>
+            <h2>Methodology</h2>
             <div class="features" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
                 <div class="feature-card" style="display: flex; flex-direction: column;">
                     <div style="flex-grow: 1;">
@@ -293,16 +293,16 @@
                     </div>
                 </div>
             </div>
+            <h3>Framework</h3>
+                <div style="background: white; padding: 1.5rem; border-radius: 8px; margin-top: 1rem; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                    <h4 style="color: var(--primary-color); margin-bottom: 1rem;">ExeDec Framework</h4>
+                    <img src="images/exedec_workflow.svg" alt="ExeDec Framework" class="main-image">
+                </div>
         </section>
 
         <section class="section">
             <h2>Evaluation</h2>
             <div style="margin-bottom: 2rem;">
-                <h3>Methodology</h3>
-                <div style="background: white; padding: 1.5rem; border-radius: 8px; margin-top: 1rem; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-                    <h4 style="color: var(--primary-color); margin-bottom: 1rem;">ExeDec Framework</h4>
-                    <img src="images/exedec_framework.svg" alt="ExeDec Framework" class="main-image">
-                </div>
                 <div style="background: white; padding: 1.5rem; border-radius: 8px; margin-top: 1.5rem; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
                     <h4 style="color: var(--primary-color); margin-bottom: 1rem;">Evaluation Framework</h4>
                     <p>Comprehensive evaluation across two program synthesis domains:</p>
@@ -315,184 +315,29 @@
         </section>
 
         <section class="section">
-            <h2>Quantitative Results</h2>
-            <p>Our comprehensive evaluation demonstrates DSEG-LIME's superior performance across multiple metrics:</p>
-            
-            <h3>Performance Metrics</h3>
-            <div class="results-grid">
-                <div class="metric-card">
-                    <h3>Gini Index</h3>
-                    <div class="metric-value">0.54</div>
-                    <p>Best score (DSEG-GLIME)</p>
-                </div>
-                <div class="metric-card">
-                    <h3>Stability</h3>
-                    <div class="metric-value">0.010</div>
-                    <p>Best repetition stability score</p>
-                </div>
-                <div class="metric-card">
-                    <h3>Random Model</h3>
-                    <div class="metric-value">74%</div>
-                    <p>Highest correctness score</p>
-                </div>
-            </div>
-
-            <div style="margin-top: 3rem;">
-                <h3>Detailed Evaluation Results</h3>
-                <div class="table-responsive">
-                    <table style="width: 100%; border-collapse: collapse; margin: 2rem 0; font-size: 0.9rem;">
-                        <thead>
-                            <tr style="background: var(--primary-color); color: white;">
-                                <th style="padding: 1rem; text-align: left;">Metric Category</th>
-                                <th style="padding: 1rem; text-align: center;">DSEG Score</th>
-                                <th style="padding: 1rem; text-align: left;">Performance</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr style="border-bottom: 1px solid #eee;">
-                                <td style="padding: 1rem;">Random Model Correctness</td>
-                                <td style="padding: 1rem; text-align: center;"><strong>74%</strong></td>
-                                <td style="padding: 1rem;">Highest among all methods</td>
-                            </tr>
-                            <tr style="border-bottom: 1px solid #eee;">
-                                <td style="padding: 1rem;">Random Explanation</td>
-                                <td style="padding: 1rem; text-align: center;"><strong>93%</strong></td>
-                                <td style="padding: 1rem;">Best performance (DSEG-GLIME)</td>
-                            </tr>
-                            <tr style="border-bottom: 1px solid #eee;">
-                                <td style="padding: 1rem;">Single Deletion</td>
-                                <td style="padding: 1rem; text-align: center;"><strong>64%</strong></td>
-                                <td style="padding: 1rem;">Significantly outperforms other methods</td>
-                            </tr>
-                            <tr style="border-bottom: 1px solid #eee;">
-                                <td style="padding: 1rem;">Deletion Score</td>
-                                <td style="padding: 1rem; text-align: center;"><strong>74%</strong></td>
-                                <td style="padding: 1rem;">Consistent across SLIME, GLIME, and BayLIME variants</td>
-                            </tr>
-                            <tr style="border-bottom: 1px solid #eee;">
-                                <td style="padding: 1rem;">Noise Preservation</td>
-                                <td style="padding: 1rem; text-align: center;"><strong>77%</strong></td>
-                                <td style="padding: 1rem;">Best consistency score (DSEG-GLIME/BayLIME)</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px; margin-top: 2rem;">
-                    <h4 style="color: var(--primary-color); margin-bottom: 1rem;">Key Findings</h4>
-                    <ul style="list-style-type: none; padding: 0;">
-                        <li style="margin-bottom: 0.5rem;">✓ Superior performance in correctness metrics</li>
-                        <li style="margin-bottom: 0.5rem;">✓ Best-in-class stability (0.010)</li>
-                        <li style="margin-bottom: 0.5rem;">✓ Highest Gini index (0.54) with GLIME variant</li>
-                        <li style="margin-bottom: 0.5rem;">✓ Consistent high performance across all LIME variants</li>
-                        <li>✓ Balanced computation time (28.5-31.9s)</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
             <h2>Qualitative Results</h2>
-            <p>Our comprehensive user study with 87 participants evaluated the quality and interpretability of explanations across different segmentation methods:</p>
+            <p>Our comprehensive evaluation demonstrates that while ExeDec excels at learning expedient decomposition strategies in the RobustFill domain, it struggles to do so in the DeepCoder domain. The accompanying plots illustrate this discrepancy by showing the density of solved tasks as a function of both semantic and syntactic overlap with the ground truth decomposition—that is, whether the same subtasks are predicted (semantic overlap) and whether those subtasks are solved using the same program tokens as in the ground truth (syntactic overlap). A high concentration of solved tasks in regions of high overlap indicates effective learning of meaningful decompositions. While such a pattern emerges clearly in RobustFill, the spread in DeepCoder suggests difficulty in aligning with the correct decomposition strategy.</p>
+            <img src="images/solved_tasks_average_density_robustfill.svg" alt="Density of solved tasks on Robustfill" class="main-image">
+            <img src="images/solved_tasks_average_density_deepcoder.svg" alt="Density of solved tasks on Deepcoder" class="main-image">
+
+            <p>This trend can also be seen when looking at the number of subtasks ExeDec predicts: In the Robustfill domain, it is very close the the number of ground truth subtasks whereas it significantly deviates from the ground truth in the Deepcoder domain. This suggests, that in the Deepcoder domain ExeDec benefits from the repeated envoking of the Synthesizer Model.</p>
+            <img src="images/num_decompositions_barplot_deepcoder_ExeDec.svg" alt="Number of Decompositions ExeDec" class="main-image">
+            <img src="images/num_decompositions_barplot_deepcoder_REGISM.svg" alt="Number of Decompositions REGISM" class="main-image">
+
+            <p>When looking at the quality of the solutions generated by REGISM, one can see that they are closer to the ground truth solutions.</p>
+            <img src="images/density_exclusive_deepcoder_average.svg" alt="Number of Decompositions ExeDec" class="main-image">
             
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 2rem 0;">
-                <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;">User Study Results</h3>
-                    <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
-                        <thead>
-                            <tr style="background: var(--primary-color); color: white;">
-                                <th style="padding: 0.75rem; text-align: left;">Method</th>
-                                <th style="padding: 0.75rem; text-align: center;">Avg. Score ↑</th>
-                                <th style="padding: 0.75rem; text-align: center;">Best Rated ↑</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr style="border-bottom: 1px solid #eee; background: #e3f2fd;">
-                                <td style="padding: 0.75rem;"><strong>DSEG</strong></td>
-                                <td style="padding: 0.75rem; text-align: center;"><strong>4.16</strong></td>
-                                <td style="padding: 0.75rem; text-align: center;"><strong>1042</strong></td>
-                            </tr>
-                            <tr style="border-bottom: 1px solid #eee;">
-                                <td style="padding: 0.75rem;">SLIC</td>
-                                <td style="padding: 0.75rem; text-align: center;">3.01</td>
-                                <td style="padding: 0.75rem; text-align: center;">150</td>
-                            </tr>
-                            <tr style="border-bottom: 1px solid #eee;">
-                                <td style="padding: 0.75rem;">Quickshift</td>
-                                <td style="padding: 0.75rem; text-align: center;">1.99</td>
-                                <td style="padding: 0.75rem; text-align: center;">90</td>
-                            </tr>
-                            <tr style="border-bottom: 1px solid #eee;">
-                                <td style="padding: 0.75rem;">Felzenszwalb</td>
-                                <td style="padding: 0.75rem; text-align: center;">3.25</td>
-                                <td style="padding: 0.75rem; text-align: center;">253</td>
-                            </tr>
-                            <tr style="border-bottom: 1px solid #eee;">
-                                <td style="padding: 0.75rem;">Watershed</td>
-                                <td style="padding: 0.75rem; text-align: center;">2.59</td>
-                                <td style="padding: 0.75rem; text-align: center;">205</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <p style="font-size: 0.9rem; color: #666; margin-top: 1rem;">Note: Average scores are on a scale of 1-5, with 5 being the best. Best Rated shows the number of times each method was rated highest.</p>
-                </div>
-
-                <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Key Findings</h3>
-                    <ul style="list-style-type: none; padding: 0;">
-                        <li style="margin-bottom: 1rem;">📈 <strong>Highest Average Score:</strong> DSEG achieved 4.16/5, significantly outperforming other methods</li>
-                        <li style="margin-bottom: 1rem;">🏆 <strong>Most Preferred:</strong> DSEG was rated best 1042 times, over 4x more than the next best method</li>
-                        <li style="margin-bottom: 1rem;">📊 <strong>Consistent Performance:</strong> DSEG maintained superior ratings across different image types and scenarios</li>
-                        <li>🎯 <strong>User Satisfaction:</strong> Participants particularly appreciated DSEG's alignment with human-recognized features</li>
-                    </ul>
-                </div>
+            <h2>Quantitaive Results</h3>
+            <p>	While ExeDec demonstrates clear advantages in Length Generalization and Composing Different Concepts, REGISM matches or even surpasses ExeDec across all other evaluation categories. This comparison underscores the effectiveness of iterative synthesis calls—a core mechanism leveraged by ExeDec—as a powerful strategy for tackling complex synthesis tasks.</p>
+            <img src="images/accuracy_barplot_deepcoder.svg" alt="Accuracy on Deepcoder" class="main-image">
             </div>
 
-            <h3 style="margin-top: 2rem;">Example Explanations</h3>
-            <div class="results-grid" style="grid-template-columns: 1fr;">
-                <div style="background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); margin-bottom: 2rem;">
-                    <h4 style="color: var(--primary-color); margin-bottom: 1rem;">Feature Attribution Heatmaps</h4>
-                    <img src="Dataset/Results/heatmaps.png" alt="Feature Attribution Heatmaps" style="width: 100%; margin-bottom: 1rem;">
-                    <p style="color: #444; font-size: 0.95rem;">
-                        DSEG-LIME generates precise feature attribution heatmaps for different object classes. The examples above show attribution maps for a dishwasher, gorilla, and airplane, where darker blue regions indicate stronger positive contributions to the model's decision. This demonstrates DSEG-LIME's ability to identify semantically meaningful regions that influence the model's predictions.
-                    </p>
-                </div>
-
-                <div style="background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); margin-bottom: 2rem;">
-                    <h4 style="color: var(--primary-color); margin-bottom: 1rem;">Multimodal Analysis & Zero-Shot Classification</h4>
-                    <img src="Dataset/Results/Deer.png" alt="Deer Multimodal Analysis" style="width: 100%; margin-bottom: 1rem;">
-                    <p style="color: #444; font-size: 0.95rem;">
-                        DSEG-LIME's capability to integrate both visual and textual information for comprehensive explanations, showcasing its versatility in zero-shot classification scenarios using CLIP. The example demonstrates analysis of a deer image with associated text about wildlife conservation, where CLIP successfully identifies the image as a "land mammal" without prior training on this specific category. The bar chart shows feature importance scores that incorporate both visual elements and textual context, highlighting terms like "wildlife" and "climate" that influence the model's predictions. This demonstrates DSEG-LIME's ability to explain zero-shot predictions by leveraging CLIP's multimodal understanding.
-                    </p>
-                </div>
-
-                <div style="background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-                    <h4 style="color: var(--primary-color); margin-bottom: 1rem;">Granularity Control</h4>
-                    <img src="Dataset/Results/zebra.png" alt="Zebra Granularity Example" style="width: 100%; margin-bottom: 1rem;">
-                    <p style="color: #444; font-size: 0.95rem;">
-                        Demonstration of DSEG-LIME's user-controlled granularity: The original image (left) is analyzed at different hierarchical depths. At d=1, the explanation captures major features, while at d=2, it provides finer-grained segmentation focusing on more specific regions like the head and striped pattern. This flexibility allows users to choose the level of detail in explanations.
-                    </p>
-                </div>
-            </div>
-            <p style="text-align: center; margin-top: 1rem;">
-                <a href="#" class="button">View More Examples</a>
-            </p>
         </section>
-
-        <section class="section">
-            <h2>Quick Start</h2>
-            <p>Get started with DSEG-LIME using our interactive notebook:</p>
-            <div style="text-align: center; margin: 2rem 0;">
-                <a href="DSEG_Demo.ipynb" class="button">Try Demo Notebook</a>
-                <a href="https://github.com/patrick-knab/DSEG-LIME" class="button">View on GitHub</a>
-            </div>
-        </section>
-
     </main>
 
     <footer>
         <div class="container">
-            <p>© 2025 DSEG-LIME Research Team. All rights reserved.</p>
+            <p>© 2025 REGISM Research Team. All rights reserved.</p>
         </div>
     </footer>
 </body>
