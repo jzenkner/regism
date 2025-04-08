@@ -230,16 +230,21 @@
                     <h4 style="color: var(--primary-color); margin-bottom: 1rem;">Core Technologies</h4>
                     <ul style="list-style: none; padding: 0;">
                         <li style="margin-bottom: 0.8rem;">
-                            <span style="font-weight: 600;">🔍 Foundation Models</span>
-                            <p style="font-size: 0.9rem; color: #666; margin-top: 0.2rem;">SAM, DETR</p>
+                            <span style="font-weight: 600;">🧠 ExeDec</span>
+                            <p style="font-size: 0.9rem; color: #666; margin-top: 0.2rem;">Synthesizer Model generates single-step program</p>
+                            <p style="font-size: 0.9rem; color: #666; margin-top: 0.2rem;">Subgoal Model decomposes task in single-step subtask</p>
+                            <p style="font-size: 0.9rem; color: #666; margin-top: 0.2rem;">Synthesizer Model generates program to solve the subtask</p>
                         </li>
                         <li style="margin-bottom: 0.8rem;">
-                            <span style="font-weight: 600;">🧠 Base Models</span>
-                            <p style="font-size: 0.9rem; color: #666; margin-top: 0.2rem;">EfficientNet, ResNet, ViT, ConvNext, CLIP</p>
+                            <span style="font-weight: 600;">🔁 REGISM</span>
+                            <p style="font-size: 0.9rem; color: #666; margin-top: 0.2rem;">No Subgoal Model, just iterative calls to Synthesizer Model</p>
+                            <p style="font-size: 0.9rem; color: #666; margin-top: 0.2rem;">Synthesizer Model generates single-step program</p>
+                            <p style="font-size: 0.9rem; color: #666; margin-top: 0.2rem;">Single-step program is executed, task specifications are updated</p>
+                        
                         </li>
                         <li>
-                            <span style="font-weight: 600;">🎯 Applications</span>
-                            <p style="font-size: 0.9rem; color: #666; margin-top: 0.2rem;">XAI, Vision, Concept Hierarchy</p>
+                            <span style="font-weight: 600;">🎯 Keywords</span>
+                            <p style="font-size: 0.9rem; color: #666; margin-top: 0.2rem;">Task Decomposition, Compositional Generalization, Iterative Execution-Guided Synthesis</p>
                         </li>
                     </ul>
                 </div>
@@ -251,62 +256,44 @@
             <div class="features" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
                 <div class="feature-card" style="display: flex; flex-direction: column;">
                     <div style="flex-grow: 1;">
-                        <h3>Data-Driven Segmentation</h3>
-                        <p style="margin: 1rem 0;">Advanced feature generation aligned with human recognition patterns using foundation models</p>
+                        <h3>ExeDec</h3>
+                        <p style="margin: 1rem 0;">Explicit task decomposition framework for program synthesis</p>
                         <ul style="list-style: none; margin-top: 1rem; font-size: 0.9rem; color: #666;">
                             <li style="margin-bottom: 0.5rem;">
-                                <span>🔍 SAM (Segment Anything)</span>
-                                <p style="font-size: 0.85rem; margin-left: 1.5rem; color: #888;">Precise object segmentation</p>
+                                <span>Subgoal Model</span>
+                                <p style="font-size: 0.85rem; margin-left: 1.5rem; color: #888;">Explicit task decomposition</p>
                             </li>
                             <li>
-                                <span>🎯 DETR Object Detection</span>
-                                <p style="font-size: 0.85rem; margin-left: 1.5rem; color: #888;">End-to-end object recognition</p>
+                                <span>Synthesizer Model</span>
+                                <p style="font-size: 0.85rem; margin-left: 1.5rem; color: #888;">Inductive program synthesis</p>
                             </li>
                         </ul>
                     </div>
                     <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #eee;">
-                        <span style="font-size: 0.9rem; color: #2c3e50; font-weight: 600;">Primary Use:</span>
-                        <p style="font-size: 0.85rem; color: #666; margin-top: 0.3rem;">Feature extraction and semantic segmentation</p>
+                        <span style="font-size: 0.9rem; color: #2c3e50; font-weight: 600;">Workflow:</span>
+                        <p style="font-size: 0.85rem; color: #666; margin-top: 0.3rem;">Until task is solved or max. step limit is reached:</p>
+                            <p style="font-size: 0.85rem; color: #666; margin-top: 0.3rem;">Subgoal Model predicts next single-step subtask</p>
+                            <p style="font-size: 0.85rem; color: #666; margin-top: 0.3rem;">Synthesizer Model generates program given the predicted subtask</p>
+                            <p style="font-size: 0.85rem; color: #666; margin-top: 0.3rem;">Program is executed & task specifications are updated</p>
                     </div>
                 </div>
+                <div class="features" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
                 <div class="feature-card" style="display: flex; flex-direction: column;">
                     <div style="flex-grow: 1;">
-                        <h3>Hierarchical Approach</h3>
-                        <p style="margin: 1rem 0;">User-steered granularity in the segmentation procedure through composition</p>
+                        <h3>REGISM</h3>
+                        <p style="margin: 1rem 0;">Execution-guided adaption for program synthesis</p>
                         <ul style="list-style: none; margin-top: 1rem; font-size: 0.9rem; color: #666;">
-                            <li style="margin-bottom: 0.5rem;">
-                                <span>🌟 ConvNeXt Integration</span>
-                                <p style="font-size: 0.85rem; margin-left: 1.5rem; color: #888;">Modern architecture support</p>
-                            </li>
                             <li>
-                                <span>🔮 ResNet Backbone</span>
-                                <p style="font-size: 0.85rem; margin-left: 1.5rem; color: #888;">Robust feature hierarchy</p>
+                                <span>Synthesizer Model</span>
+                                <p style="font-size: 0.85rem; margin-left: 1.5rem; color: #888;">Inductive program synthesis</p>
                             </li>
                         </ul>
                     </div>
                     <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #eee;">
-                        <span style="font-size: 0.9rem; color: #2c3e50; font-weight: 600;">Primary Use:</span>
-                        <p style="font-size: 0.85rem; color: #666; margin-top: 0.3rem;">Multi-level feature analysis and composition</p>
-                    </div>
-                </div>
-                <div class="feature-card" style="display: flex; flex-direction: column;">
-                    <div style="flex-grow: 1;">
-                        <h3>Improved Interpretability</h3>
-                        <p style="margin: 1rem 0;">Enhanced alignment with human-recognized concepts and better XAI metrics</p>
-                        <ul style="list-style: none; margin-top: 1rem; font-size: 0.9rem; color: #666;">
-                            <li style="margin-bottom: 0.5rem;">
-                                <span>👁️ VisionTransformer Support</span>
-                                <p style="font-size: 0.85rem; margin-left: 1.5rem; color: #888;">Attention-based analysis</p>
-                            </li>
-                            <li>
-                                <span>🎯 CLIP Zero-shot Analysis</span>
-                                <p style="font-size: 0.85rem; margin-left: 1.5rem; color: #888;">Cross-modal understanding</p>
-                            </li>
-                        </ul>
-                    </div>
-                    <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #eee;">
-                        <span style="font-size: 0.9rem; color: #2c3e50; font-weight: 600;">Primary Use:</span>
-                        <p style="font-size: 0.85rem; color: #666; margin-top: 0.3rem;">Human-aligned explanations and explanation for zero-shot predictions</p>
+                        <span style="font-size: 0.9rem; color: #2c3e50; font-weight: 600;">Workflow:</span>
+                        <p style="font-size: 0.85rem; color: #666; margin-top: 0.3rem;">Until task is solved or max. step limit is reached:</p>
+                            <p style="font-size: 0.85rem; color: #666; margin-top: 0.3rem;">Synthesizer Model generates program given the task specification</p>
+                            <p style="font-size: 0.85rem; color: #666; margin-top: 0.3rem;">Program is executed & task specifications are updated</p>
                     </div>
                 </div>
             </div>
