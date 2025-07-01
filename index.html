@@ -186,10 +186,10 @@
     <header>
         <div class="container">
             <div style="position: absolute; top: 1rem; left: 1rem; display: flex; gap: 1rem;">
-                <img src="images/Logo_TUC_de_CMYK (1).svg" alt="tuc" style="height: 100px;">
+                <img src="images/Logo_TUC_de_CMYK (1).svg" alt="tuc" style="height: 125px;">
             </div>
             <div style="position: absolute; top: 1rem; right: 1rem; display: flex; gap: 1rem;">
-                <img src="images/Full_logo.svg" alt="tuc" style="height: 100px;">
+                <img src="images/Full_logo.svg" alt="tuc" style="height: 85px;">
             </div>
             <div class="title">
                 <h1>Shedding Light in Task Decomposition in Program Synthesis</h1>
@@ -257,67 +257,84 @@
             Instead of writing code explicitly, the user shows what the program should do, and the system infers a program in a predefined domain-specific language (DSL) that is consistent with the examples. 
             PBE is widely used in scenarios like string transformation, data cleaning, and end-user programming, where writing code manually is difficult or time-consuming.
             <div style="background: white; padding: 1.5rem; border-radius: 8px; margin-top: 1rem; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-                <h4 style="color: var(--primary-color); margin-bottom: 1rem;">PBE Tasks</h4>
+                <h4 style="color: var(--primary-color); margin-bottom: 1rem;">Illustrative PBE task</h4>
                 <a href="https://lab42.global/arc/" target="_blank" rel="noopener noreferrer">
-                    <img src="images/ARC-Explanation2.svg" alt="ARC Example" style="height: 500px;">
+                    <div style="text-align: center;">
+                        <img src="images/ARC-Explanation2.svg" alt="ARC Example" style="height: 500px;">
+                    </div>  
                 </a>
             </div>
-            <h2>Methodology</h2>
-            <div class="features" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-                <div class="feature-card" style="display: flex; flex-direction: column;">
-                    <div style="flex-grow: 1;">
-                        <h3>ExeDec</h3>
-                        <p style="margin: 1rem 0;">Explicit task decomposition framework for program synthesis</p>
-                        <ul style="list-style: none; margin-top: 1rem; font-size: 0.9rem; color: #666;">
-                            <li style="margin-bottom: 0.5rem;">
-                                <span>Subgoal Model</span>
-                                <p style="font-size: 0.85rem; margin-left: 1.5rem; color: #888;">Decompose a PBE task into a subtask (also in the PBE form) by predicting the output of the next subtask.</p>
-                            </li>
-                            <li>
-                                <span>Synthesizer Model</span>
-                                <p style="font-size: 0.85rem; margin-left: 1.5rem; color: #888;">Solve predicted subtask using execution-guided program synthesis</p>
-                            </li>
-                        </ul>
-                    </div>
-                    <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #eee;">
-                        <span style="font-size: 0.9rem; color: #2c3e50; font-weight: 600;">Workflow:</span>
-                        <p style="font-size: 0.85rem; color: #666; margin-top: 0.5rem;">Repeat until the task is solved or a maximum step limit is reached:</p>
-                        <ol style="font-size: 0.85rem; color: #666; padding-left: 1.2rem; margin-top: 0.3rem;">
-                            <li>Subgoal Model predicts the next single-step subtask.</li>
-                            <li>Synthesizer Model generates a program for the predicted subtask.</li>
-                            <li>The program is executed, and task specifications are updated.</li>
-                        </ol>
-                    </div>
-                </div>
-                <div class="features" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-                <div class="feature-card" style="display: flex; flex-direction: column;">
-                    <div style="flex-grow: 1;">
-                        <h3>Repeated execution-guided invocation of the Synthesizer Model (REGISM)</h3>
-                        <p style="margin: 1rem 0;">Removing the task decomposition step from ExeDec</p>
-                        <ul style="list-style: none; margin-top: 1rem; font-size: 0.9rem; color: #666;">
-                            <li>
-                                <span><strong>No</strong> Subgoal Model</span>
-                                <p style="font-size: 0.85rem; margin-left: 1.5rem; color: #888;">Guidance via task decomposition is removed.</p>
-                            </li>
-                            <li>
-                                <span>Synthesizer Model</span>
-                                <p style="font-size: 0.85rem; margin-left: 1.5rem; color: #888;">Solve remaining task using execution-guided program synthesis</p>
-                            </li>
-                        </ul>
-                    </div>
-                   <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #eee;">
-                    <span style="font-size: 0.9rem; color: #2c3e50; font-weight: 600;">Workflow:</span>
-                    <p style="font-size: 0.85rem; color: #666; margin-top: 0.5rem;">Repeat until the task is solved or a maximum step limit is reached:</p>
-                    <ol style="font-size: 0.85rem; color: #666; padding-left: 1.2rem; margin-top: 0.3rem;">
-                        <li>Synthesizer Model generates a program based on the current task specification.</li>
-                        <li>The program is executed, and task specifications are updated accordingly.</li>
-                    </ol>
-                    <p style="font-size: 0.85rem; color: #666; margin-top: 0.5rem;"><em>Note:</em> Subtasks are only revealed in hindsight through execution.</p>
-                </div>
-                </div>
-            </div>
         </section>
-        <h3>Background: ExeDec</h3>
+
+        <section class="section">
+            <h2>Methodology</h2>
+<div class="features" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+    
+    <!-- ExeDec Card -->
+    <div class="feature-card" style="display: flex; flex-direction: column;">
+        <div style="flex-grow: 1;">
+            <h3>ExeDec</h3>
+            <p style="margin: 1rem 0;">Explicit task decomposition framework for program synthesis</p>
+            <ul style="list-style: none; margin-top: 1rem; font-size: 0.9rem; color: #666;">
+                <li style="margin-bottom: 0.5rem;">
+                    <span>Subgoal Model</span>
+                    <p style="font-size: 0.85rem; margin-left: 1.5rem; color: #888;">
+                        Decompose a PBE task into a subtask (yielding a new PBE task) by predicting the output of the next subtask.
+                    </p>
+                </li>
+                <li>
+                    <span>Synthesizer Model</span>
+                    <p style="font-size: 0.85rem; margin-left: 1.5rem; color: #888;">
+                        Solve predicted subtask using execution-guided program synthesis.
+                    </p>
+                </li>
+            </ul>
+        </div>
+        <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #eee;">
+            <span style="font-size: 0.9rem; color: #2c3e50; font-weight: 600;">Workflow:</span>
+            <p style="font-size: 0.85rem; color: #666; margin-top: 0.5rem;">Repeat until the task is solved or a maximum step limit is reached:</p>
+            <ol style="font-size: 0.85rem; color: #666; padding-left: 1.2rem; margin-top: 0.3rem;">
+                <li>Subgoal Model predicts the next single-step subtask.</li>
+                <li>Synthesizer Model generates a program for the predicted subtask.</li>
+                <li>The program is executed, and task specifications are updated.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- REGISM Card -->
+    <div class="feature-card" style="display: flex; flex-direction: column;">
+        <div style="flex-grow: 1;">
+            <h3>Repeated execution-guided invocation of the Synthesizer Model (REGISM)</h3>
+            <p style="margin: 1rem 0;">Removing the task decomposition step from ExeDec</p>
+            <ul style="list-style: none; margin-top: 1rem; font-size: 0.9rem; color: #666;">
+                <li>
+                    <span><strong>No</strong> Subgoal Model</span>
+                    <p style="font-size: 0.85rem; margin-left: 1.5rem; color: #888;">
+                        Guidance via task decomposition is removed.
+                    </p>
+                </li>
+                <li>
+                    <span>Synthesizer Model</span>
+                    <p style="font-size: 0.85rem; margin-left: 1.5rem; color: #888;">
+                        Solve remaining task using execution-guided program synthesis.
+                    </p>
+                </li>
+            </ul>
+        </div>
+        <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #eee;">
+            <span style="font-size: 0.9rem; color: #2c3e50; font-weight: 600;">Workflow:</span>
+            <p style="font-size: 0.85rem; color: #666; margin-top: 0.5rem;">Repeat until the task is solved or a maximum step limit is reached:</p>
+            <ol style="font-size: 0.85rem; color: #666; padding-left: 1.2rem; margin-top: 0.3rem;">
+                <li>Synthesizer Model generates a program based on the current task specification.</li>
+                <li>The program is executed, and task specifications are updated accordingly.</li>
+            </ol>
+            <p style="font-size: 0.85rem; color: #666; margin-top: 0.5rem;">
+                <em>Note:</em> Subtasks are only revealed in hindsight through execution.
+            </p>
+        </div>
+    </div>
+
+</div>
             <div style="background: white; padding: 1.5rem; border-radius: 8px; margin-top: 1rem; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
                 <h4 style="color: var(--primary-color); margin-bottom: 1rem;">ExeDec Framework</h4>
                 <div style="text-align: center;">
@@ -325,7 +342,6 @@
                 </div>
             </div>
 
-        <h3>Evaluation</h3>
         <div style="margin-bottom: 2rem;">
             <div style="background: white; padding: 1.5rem; border-radius: 8px; margin-top: 1.5rem; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
                 <h4 style="color: var(--primary-color); margin-bottom: 1rem;">Evaluation Framework</h4>
@@ -336,16 +352,16 @@
                 </ul>
             </div>
         </div>
-
+    </section>
         <section class="section">
             <h2>Qualitative Results</h2>
             <p>Our comprehensive evaluation demonstrates that while ExeDec excels at learning expedient decomposition strategies in the RobustFill domain, it struggles to do so in the DeepCoder domain. The accompanying plots illustrate this discrepancy by showing the density of solved tasks as a function of both semantic and syntactic overlap with the ground truth decomposition—that is, whether the same subtasks are predicted (semantic overlap) and whether those subtasks are solved using the same program tokens as in the ground truth (syntactic overlap). A high concentration of solved tasks in regions of high overlap indicates effective learning of meaningful decompositions. While such a pattern emerges clearly in RobustFill, the spread in DeepCoder suggests difficulty in aligning with the correct decomposition strategy.</p>
-            <div style="display: flex; gap: 1rem; justify-content: center; align-items: flex-start; flex-wrap: wrap;">
+            <div style="display: flex; gap: 2%; justify-content: center; flex-wrap: wrap;">
                 <img src="images/solved_tasks_average_density_robustfill.svg" alt="Density of solved tasks on Robustfill" class="main-image">
                 <img src="images/solved_tasks_average_density_deepcoder.svg" alt="Density of solved tasks on Deepcoder" class="main-image">
             </div>
             <p>This trend can also be seen when looking at the number of subtasks ExeDec predicts: In the Robustfill domain, it is very close the the number of ground truth subtasks whereas it significantly deviates from the ground truth in the Deepcoder domain. This suggests, that in the Deepcoder domain ExeDec benefits from the repeated envoking of the Synthesizer Model.</p>
-            <div style="display: flex; gap: 1rem; justify-content: center; align-items: flex-start; flex-wrap: wrap;">
+            <div style="display: flex; gap: 2%; justify-content: center; flex-wrap: wrap;">
                 <img src="images/num_decompositions_barplot_deepcoder_ExeDec.svg" alt="Number of Decompositions ExeDec" class="main-image">
                 <img src="images/num_decompositions_barplot_deepcoder_REGISM.svg" alt="Number of Decompositions REGISM" class="main-image">
             </div>
