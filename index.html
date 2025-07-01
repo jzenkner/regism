@@ -359,8 +359,8 @@
                 The accompanying plots illustrate this discrepancy by showing the density of solved tasks as a function of both semantic and syntactic overlap with the ground truth decomposition-that is, whether the same subtasks are predicted (semantic overlap) and whether those subtasks are solved using the same program tokens as in the ground truth (syntactic overlap).
                 A high concentration of solved tasks in regions of high overlap indicates effective learning of meaningful decompositions. While such a pattern emerges clearly in RobustFill, the spread in DeepCoder suggests difficulty in aligning with the correct decomposition strategy.</p>
             <div style="display: flex; gap: 2%; justify-content: center; flex-wrap: wrap;">
-                <img src="images/solved_tasks_average_density_robustfill.svg" alt="Density of solved tasks on Robustfill" class="main-image" style="width: 25%; height: auto;">
-                <img src="images/solved_tasks_average_density_deepcoder.svg" alt="Density of solved tasks on Deepcoder" class="main-image" style="width: 25%; height: auto;">
+                <img src="images/solved_tasks_average_density_robustfill.svg" alt="Density of solved tasks on Robustfill" class="main-image" style="width: 40%; height: auto;">
+                <img src="images/solved_tasks_average_density_deepcoder.svg" alt="Density of solved tasks on Deepcoder" class="main-image" style="width: 40%; height: auto;">
             </div>
             <p>This trend can also be seen when looking at the number of subtasks ExeDec predicts: In the Robustfill domain, it is very close the the number of ground truth subtasks whereas it significantly deviates from the ground truth in the Deepcoder domain. This suggests, that in the Deepcoder domain ExeDec benefits from the repeated envoking of the Synthesizer Model.</p>
             <div style="display: flex; gap: 2%; justify-content: center; flex-wrap: wrap;">
